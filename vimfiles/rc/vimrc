@@ -1,0 +1,96 @@
+if &compatible
+  set nocompatible
+endif
+
+function! s:source_rc(path, ...) abort
+  let use_global = get(a:000, 0, !has('vim_starting'))
+  let abspath = resolve(expand('~/vimfiles/rc/' . a:path))
+  if !use_global
+    execute 'source' fnameescape(abspath)
+    return
+  endif
+
+  " substitute all 'set' to 'setglobal'
+  let content = map(readfile(abspath),
+        \ 'substitute(v:val, "^\\W*\\zsset\\ze\\W", "setglobal", "")')
+  " create tempfile and source the tempfile
+  let tempfile = tempname()
+  try
+    call writefile(content, tempfile)
+    execute 'source' fnameescape(tempfile)
+  finally
+    if filereadable(tempfile)
+      call delete(tempfile)
+    endif
+  endtry
+endfunction
+
+" Set augroup.
+augroup MyAutoCmd
+  autocmd!
+  autocmd FileType,Syntax,BufNewFile,BufNew,BufRead *?
+        \ call vimrc#on_filetype()
+  autocmd CursorHold *.toml syntax sync minlines=300
+augroup END
+
+if has('vim_starting')
+  call s:source_rc('init.rc.vim')
+endif
+
+if g:vimrc_has_dein
+    call s:source_rc('dein.rc.vim')
+endif
+
+if has('vim_starting') && !empty(argv())
+  call vimrc#on_filetype()
+endif
+
+if !has('vim_starting')
+  if g:vimrc_has_dein
+    call dein#call_hook('source')
+    call dein#call_hook('post_source')
+  endif
+
+  syntax enable
+  filetype plugin indent on
+endif
+
+
+"---------------------------------------------------------------------------
+
+call s:source_rc('encoding.rc.vim')
+
+call s:source_rc('options.rc.vim')
+
+call s:source_rc('mappings.rc.vim')
+
+if has('nvim')
+  call s:source_rc('neovim.rc.vim')
+endif
+
+if IsWindows()
+  call s:source_rc('windows.rc.vim')
+else
+  call s:source_rc('unix.rc.vim')
+endif
+
+if !has('nvim') && has('gui_running')
+  call s:source_rc('gui.rc.vim')
+endif
+
+"autocmd VimEnter * VimFilerExplorer
+if g:vimrc_has_dein
+  autocmd VimEnter * VimFiler -split -simple -winwidth=42 -no-quit -no-focus
+endif
+
+augroup vimrc-local
+  autocmd!
+  autocmd BufNewFile,BufReadPost * call s:vimrc_local(expand('<afile>:p:h'))
+augroup END
+
+function! s:vimrc_local(loc)
+  let files = findfile('.vimrc.local', escape(a:loc, ' ') . ';', -1)
+  for i in reverse(filter(files, 'filereadable(v:val)'))
+    source `=i`
+  endfor
+endfunction

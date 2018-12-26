@@ -1,0 +1,202 @@
+"---------------------------------------------------------------------------
+" GUI:
+"
+
+" GUIの時にWindow透過 ※ Override colorscheme and font config
+gui
+set transparency=230
+
+"---------------------------------------------------------------------------
+" Fonts: "{{{
+set ambiwidth=double
+
+if has('win32') || has('win64')
+  " For Windows.
+
+  "set guifont=Ricty:h12
+  "set guifont=Courier\ New:h11
+  "set guifontwide=VL\ Gothic:h11
+  "set guifontwide=Ricty:h12
+  "set guifont=VL\ Gothic:h11
+  "set guifont=Consolas:h12
+  "set guifont=Consolas:h9 guifontwide=MS_Gothic:h9
+  "set guifont=Consolas:h9 guifontwide=Consolas:h9
+  set guifont=Consolas:h9
+  "set guifontwide=Meiryo_UI:h9
+  "半角文字の設定
+  "set guifont=MS_Gothic:h9
+  "set guifont=Consolas:h9
+  "set guifont=MS_Gothic:h9
+  "set guifont=MS_ゴシック:h9 " not valid
+  "set guifont=Meiryo_UI:h9
+  "set guifontwide=Meiryo_UI:h12
+  "set guifontwide=ＭＳ_明朝:h9
+  "全角文字の設定
+  "set guifontwide=MS_Gothic:h10
+  "set guifontwide=ＭＳ_ゴシック:h9
+
+  " Fixed
+  "set guifont=Osaka－等幅:h10
+  "set guifont=Ricty_Diminished_for_Powerline:h10
+  "set guifont=Myrica_M:h12
+  "set guifont=Consolas:h10
+  "set guifontwide=Myrica_M:h11
+  "set guifontwide=MeiryoKe_Console:h10
+  set guifontwide=MeiryoKe_Console:h9
+
+  " Number of pixel lines inserted between characters.
+  set linespace=1
+
+  if has('patch-7.4.394')
+    " Use DirectWrite
+    set renderoptions=type:directx
+  endif
+
+  if has('kaoriya')
+    " For Kaoriya only.
+    " @see East Asian Ambiguous Width Characterなんて大嫌いだ！バーカ！畜生め～！ | A7Mの日記 | スラッシュドット・ジャパン http://slashdot.jp/journal/511324/East-Asian-Ambiguous-Width-Character%E3%81%AA%E3%82%93%E3%81%A6%E5%A4%A7%E5%AB%8C%E3%81%84%E3%81%A0%EF%BC%81%E3%83%90%E3%83%BC%E3%82%AB%EF%BC%81%E7%95%9C%E7%94%9F%E3%82%81%EF%BD%9E%EF%BC%81
+    "set ambiwidth=auto
+  endif
+elseif has('mac')
+  " For Mac.
+   set guifont=Osaka－等幅:h14
+  "set guifont=Menlo Regular:h12
+  "set guifont=Source Code Pro:h12
+else
+  " For Linux.
+   "set guifontwide=VL\ Gothic\ 13
+   set guifont=Courier\ 10\ Pitch\ 14
+endif"}}}
+
+"---------------------------------------------------------------------------
+" Window:"{{{
+"
+if has('win32') || has('win64')
+  " Width of window.
+  " set columns=230
+  " Height of window.
+  " set lines=55
+else
+  if &columns < 170
+    " Width of window.
+     set columns=170
+  endif
+  if &lines < 40
+    " Height of window.
+     set lines=40
+  endif
+endif
+
+" Don't override colorscheme.
+"if !exists('g:colors_name')
+"  colorscheme ron
+"endif
+"}}}
+
+
+" GUI用のオプション(guioptions)
+" 水平スクロールバー表示
+set go+=b
+
+"---------------------------------------------------------------------------
+" タブページの切り替えをWindowsのように
+"---------------------------------------------------------------------------
+" CTRL+Tab SHIFT+Tabで行うように.
+if v:version >= 700
+  nnoremap <C-Tab>   gt
+  nnoremap <C-S-Tab> gT
+endif
+
+" ツールバーを削除
+set guioptions-=T
+
+colorscheme ron
+
+"---------------------------------------------------------------------------
+" Options:"{{{
+hi statement  guifg=white     gui=NONE                " 
+hi LineNr     guifg=#607075   gui=none guibg=black    " 行番号
+hi constant   guifg=magenta   gui=none                " 定数
+hi String     guifg=magenta                           " 文字列のみ
+hi preproc    guifg=red                               " 
+hi Search                              guibg=yellow   " 検索文字列の背景色
+hi type       guifg=lightblue gui=NONE                " 
+hi Normal     guifg=#babdb6            guibg=#151b1d  " 通常文字
+hi SpecialKey guifg=#4f5b5d   gui=none guibg=#2c3032  " タブ等の特殊キー
+hi NonText    guifg=#4f5b5d   gui=none guibg=#232729  " 改行記号等
+hi Function   guifg=#ffaa33                           " 関数
+
+if version >= 700
+  " インテリセンスメニュー
+  hi Pmenu      guifg=magenta guibg=white
+  hi PmenuSel   guifg=red     guibg=lightblue
+  hi PmenuSbar                guibg=lightblue
+
+  hi TabLine      guifg=#446644    guibg=black    gui=None
+  hi TabLineFill  guifg=#232729    guibg=#232729  gui=None
+  hi TabLineSel   guifg=#88ee99    guibg=black    gui=None
+endif
+"}}}
+
+" vim: foldmethod=marker
+
+
+" http://mattn.kaoriya.net/software/vim/20140523124903.htm
+let g:markdown_fenced_languages = [
+    \ 'autohotkey',
+    \ 'apache',
+    \ 'awk',
+    \ 'dos=dosbatch',
+    \ 'bat=dosbatch',
+    \ 'c',
+    \ 'cpp',
+    \ 'cs',
+    \ 'css',
+    \ 'conf',
+    \ 'erb=eruby',
+    \ 'javascript',
+    \ 'js=javascript',
+    \ 'json=javascript',
+    \ 'java',
+    \ 'make',
+    \ 'bash=sh',
+    \ 'ini=dosini',
+    \ 'sh',
+    \ 'shell=sh',
+    \ 'html',
+    \ 'pas=pascal',
+    \ 'ps1',
+    \ 'powershell=ps1',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'r',
+    \ 'diff',
+    \ 'perl',
+    \ 'pl=perl',
+    \ 'vim',
+    \ 'sass',
+    \ 'sql',
+    \ 'xml',
+    \ 'vb',
+    \ 'vb.net=vb'
+    \]
+
+" 全角空白をハイライト(好みで有効にする) {{{
+augroup HighlightWideSpace
+  au!
+  au VimEnter,ColorScheme * hi WideSpace term=underline ctermbg=gray guibg=gray
+  au VimEnter,WinEnter * match WideSpace /　/
+augroup END
+" }}}
+
+" ウインドウの幅
+set columns=180
+" ウインドウの高さ
+set lines=71
+" コマンドラインの高さ(GUI使用時)
+" set cmdheight=2
+" 画面を黒地に白にする (次行の先頭の " を削除すれば有効になる)
+"colorscheme evening " (GUI使用時)
+" ウインドウ位置
+winpos 190 0

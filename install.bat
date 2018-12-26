@@ -7,15 +7,13 @@ pause
 
 
 SET DIR_HOME=%USERPROFILE%
-SET DIR_DOTFILES=%USERPROFILE%/dotfiles
+SET DIR_DOTFILES=%USERPROFILE%\dotfiles
 
-mklink %DIR_HOME%/.gitignore %DIR_DOTFILES%/.gitignore
-mklink %DIR_HOME%/.jshintrc  %DIR_DOTFILES%/.jshintrc
-mklink %DIR_HOME%/.minttyrc  %DIR_DOTFILES%/.minttyrc
-mklink %DIR_HOME%/.vimrc     %DIR_DOTFILES%/.vimrc
-
-mklink %DIR_HOME%/init.cmd   %DIR_DOTFILES%/init.cmd
-
-
+mklink    %DIR_HOME%\.gitignore %DIR_DOTFILES%\.gitignore
+mklink    %DIR_HOME%\.jshintrc  %DIR_DOTFILES%\.jshintrc
+mklink    %DIR_HOME%\.minttyrc  %DIR_DOTFILES%\.minttyrc
+mklink    %DIR_HOME%\.vimrc     %DIR_DOTFILES%\.vimrc
+mklink    %DIR_HOME%\init.cmd   %DIR_DOTFILES%\init.cmd
+mklink /D %DIR_HOME%\vimfiles   %DIR_DOTFILES%\vimfiles
 
 pause

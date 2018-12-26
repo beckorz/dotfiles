@@ -1,0 +1,124 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# [[plugins]]
+# repo = 'godlygeek/csapprox'
+# if = "v:progname !=# 'gvim' && has('gui') && !has('nvim')"
+# hook_add = '''
+# " Convert colorscheme in Konsole.
+#  let g:CSApprox_konsole = 1
+#  let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+# '''
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+#build = 'make'
+on_source = ['unite.vim', 'vimshell.vim']
+
+# [[plugins]]
+# repo = 'thinca/vim-guicolorscheme'
+# if = "v:progname !=# 'gvim' && !has('gui') && !has('nvim')"
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+
+[[plugins]]
+repo = 'vim-jp/autofmt'
+
+#[[plugins]]
+#repo = 'tpope/vim-markdown'
+
+#[[plugins]]
+#repo = 'rcmdnk/vim-markdown'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'mattn/webapi-vim'
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = 'Shougo/unite-outline'
+
+[[plugins]]
+repo = 'chemzqm/denite-git'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+#[[plugins]]
+#repo = 'rhysd/vim-gfm-syntax'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+# css用テキストを色確認出来るプラグイン
+[[plugins]]
+repo = 'lilydjwg/colorizer'
+
+# 囲み系プラグイン
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+# 正規表現置換をプレビューしながら出来るプラグイン
+[[plugins]]
+repo = 'osyo-manga/vim-over'
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/vimfiler'
+
+[[plugins]]
+repo = 'PProvost/vim-ps1.git'
+
+[[plugins]]
+repo = 'vim-scripts/taglist.vim'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+
+[[plubins]]
+repo = 'ctrlpvim/ctrlp.vim'
+
+[[plubins]]
+repo = 'tpope/vim-dispatch'
+
+[[plugins]]
+repo = 'LeafCage/foldCC.vim'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+

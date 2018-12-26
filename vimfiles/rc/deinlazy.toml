@@ -1,0 +1,29 @@
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+#hook_source = 'source ~/vimfiles/rc/plugins/unite.rc.vim'
+
+[[plugins]]
+repo = 'beckorz/previm'
+# on_ft = ['markdown', 'rst', 'mkd']
+on_cmd = 'PrevimOpen'
+depends = 'open-browser.vim'
+
+#[[plugins]]
+#repo = 'previm/previm'
+## on_ft = ['markdown', 'rst', 'mkd']
+#on_cmd = 'PrevimOpen'
+#depends = 'open-browser.vim'
+
+[[plugins]]
+repo = 'OmniSharp/omnisharp-vim'
+on_ft = ['cs']
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = ['python']
+
+[[plugins]]
+repo = 'andymass/vim-matchup'
+on_ft = ['python']
+
