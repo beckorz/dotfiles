@@ -120,9 +120,9 @@ set imsearch=-1
 
 " ステータス行の表示内容を設定する(statusline)
 if isdirectory(expand('$CACHE/dein/repos/github.com/tpope/vim-fugitive'))
-  set stl=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%{fugitive#statusline()}%=%l,%c%V%8P
+  set stl=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%{fugitive#statusline()}%=%l,%c%V,0x%02B%8P
 else
-  set stl=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ %=[CODE=0x%02B]\ [POS=%l/%L(%02v)] 
+  set stl=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l,%c%V,0x%02B%8P
 endif
 
 set undodir=~/vimfiles/undo
