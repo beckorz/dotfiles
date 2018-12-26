@@ -1,0 +1,14 @@
+{
+    "strict"    : false, // use strict を強制
+    "indent"    : 4,    // インデントの深さ
+    "camelcase" : true, // 
+    "unused"    : true, // 宣言したきり使っていない変数を検出
+    "eqeqeq"    : true, // 
+    "undef"     : true, // グローバル変数へのアクセスを禁止
+    "browser"   : true, // ブラウザ用の奴を許可
+    "jquery"    : true, // 
+    "devel"     : true, // consoleやalertを許可
+    "-W100"     : true, // 警告を無視 (This character may get silently deleted by one or more browsers.)
+    // 事前定義
+    "predef"    : ["ActiveXObject", "WScript"]
+}

@@ -1,0 +1,16 @@
+--langmap=Basic:+.vb.bas.cls.ctl.frm.vbs
+--langmap=HTML:+.wsf+.hta
+--exclude=bin
+--exclude=obj
+--exclude=.git
+--exclude=.git*
+--exclude=jquery*.js
+--exclude=*.min.js
+--exclude=jquery.*.js
+--exclude=jquery-*.js
+--exclude=.\_lib\jquery.js
+--langdef=markdown
+--langmap=markdown:+.md.mkd.txt
+--regex-markdown=/^#[ \t]+(.*)/\1/h,Heading_L1/
+--regex-markdown=/^##[ \t]+(.*)/\1/i,Heading_L2/
+--regex-markdown=/^###[ \t]+(.*)/\1/k,Heading_L3/
