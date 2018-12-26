@@ -79,7 +79,7 @@ if !has('nvim') && has('gui_running')
 endif
 
 "autocmd VimEnter * VimFilerExplorer
-if g:vimrc_has_dein
+if isdirectory(expand('$CACHE/dein/repos/github.com/Shougo/vimfiler'))
   autocmd VimEnter * VimFiler -split -simple -winwidth=42 -no-quit -no-focus
 endif
 

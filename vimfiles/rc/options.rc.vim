@@ -119,7 +119,7 @@ set iminsert=0
 set imsearch=-1
 
 " ステータス行の表示内容を設定する(statusline)
-if g:vimrc_has_dein
+if isdirectory(expand('$CACHE/dein/repos/github.com/tpope/vim-fugitive'))
   set stl=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%{fugitive#statusline()}%=%l,%c%V%8P
 else
   set stl=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ %=[CODE=0x%02B]\ [POS=%l/%L(%02v)] 
