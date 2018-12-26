@@ -16,4 +16,7 @@ mklink    %DIR_HOME%\.vimrc     %DIR_DOTFILES%\.vimrc
 mklink    %DIR_HOME%\init.cmd   %DIR_DOTFILES%\init.cmd
 mklink /D %DIR_HOME%\vimfiles   %DIR_DOTFILES%\vimfiles
 
+mkdir %DIR_HOME%\vimfiles\tmp
+mkdir %DIR_HOME%\vimfiles\undo
+
 pause
