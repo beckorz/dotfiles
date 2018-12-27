@@ -6,19 +6,19 @@
 
 ## 方針
 - ~/dofiles もしくは、 %userprofile%/dotfiles を作成し、シンボリックリンクを張って運用する。
-- インストールスクリプト(バッチファイル)にて用意
+- インストールスクリプト(バッチファイル)にて初期インストールを行う
 
 ## Linux
 
 ```
 git clone https://github.com/beckorz/dotfiles.git ~/dotfiles
-
-ln -s
+sh install.sh
 ```
 
 ## Windows
 
 ```bat
 git clone https://github.com/beckorz/dotfiles.git %userprofile%/dotfiles
+install.bat
 ```
 
