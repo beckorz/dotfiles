@@ -135,6 +135,10 @@ REM *** cURL CA_BUNDLE
 REM  https://curl.haxx.se/ca/cacert.pem
 REM SET CURL_CA_BUNDLE=cacert.pem
 
+REM *** Java
+SET JAVA_HOME=C:\Program Files\Java\jdk1.8.0_171
+SET PATH=%PATH%;%JAVA_HOME%\bin
+
 SET LANG=ja_JP.UTF-8
 
 cls
