@@ -19,6 +19,7 @@ autocmd MyAutoCmd BufReadPost * call s:ReCheck_FENC()
 " Vimの通常使う文字エンコーディング(encoding)
 if has('win32')
   set enc=utf-8
+  set termencoding=cp932
 else
   set enc=utf-8
 endif
