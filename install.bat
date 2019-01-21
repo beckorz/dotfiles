@@ -9,6 +9,7 @@ pause
 SET DIR_HOME=%USERPROFILE%
 SET DIR_DOTFILES=%USERPROFILE%\dotfiles
 
+mklink    %DIR_HOME%\.ctags     %DIR_DOTFILES%\.ctags
 mklink    %DIR_HOME%\.gitignore %DIR_DOTFILES%\.gitignore
 mklink    %DIR_HOME%\.jshintrc  %DIR_DOTFILES%\.jshintrc
 mklink    %DIR_HOME%\.minttyrc  %DIR_DOTFILES%\.minttyrc
