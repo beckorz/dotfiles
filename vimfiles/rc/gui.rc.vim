@@ -138,9 +138,6 @@ if version >= 700
 endif
 "}}}
 
-" vim: foldmethod=marker
-
-
 " http://mattn.kaoriya.net/software/vim/20140523124903.htm
 let g:markdown_fenced_languages = [
     \ 'autohotkey',

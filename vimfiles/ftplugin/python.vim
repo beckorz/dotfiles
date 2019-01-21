@@ -1,0 +1,3 @@
+setlocal foldmethod=indent
+setlocal textwidth=80
+setlocal colorcolumn=79
