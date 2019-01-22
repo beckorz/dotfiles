@@ -152,3 +152,8 @@ let g:vim_json_syntax_conceal = 0
 "set pythonthreehome=C:/Python/python35
 "set pythonthreehome=C:/Python/python36
 
+" grepを実行したら自動的にQuickfixの一覧画面を表示
+augroup QuickFixCmd
+  autocmd!
+  autocmd QuickFixCmdPost *grep* cwindow
+augroup END
