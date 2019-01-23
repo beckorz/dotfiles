@@ -157,3 +157,6 @@ augroup QuickFixCmd
   autocmd!
   autocmd QuickFixCmdPost *grep* cwindow
 augroup END
+
+" dein向けには、shellslashが必要だが、noshellslashの方が望ましい
+set noshellslash

@@ -139,6 +139,14 @@ REM *** Java
 SET JAVA_HOME=C:\Program Files\Java\jdk1.8.0_171
 SET PATH=%PATH%;%JAVA_HOME%\bin
 
+REM *** PostgreSQL
+SET POSTGRESQL_BIN=C:\PostgreSQL\postgresql-9.1.24-1x64\pgsql\bin
+SET PATH=%PATH%;%POSTGRESQL_BIN%
+
+REM *** SQLite
+SET SQLITE3_BIN=C:\dev\SQLite
+SET PATH=%PATH%;%SQLITE3_BIN%
+
 SET LANG=ja_JP.UTF-8
 
 cls

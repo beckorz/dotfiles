@@ -325,6 +325,11 @@ if !exists("g:quickrun_config")
 endif
 
 if has('win32') || has('win64')
+    let g:quickrun_config['sql/postgres'] = { 
+    \   "hook/output_encode/enable" : 1,
+    \   "hook/output_encode/encoding" : "&termencoding",
+    \}
+
     let g:quickrun_config['python'] = { 
     \   "hook/output_encode/enable" : 1,
     \   "hook/output_encode/encoding" : "&termencoding",
