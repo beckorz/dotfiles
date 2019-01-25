@@ -80,7 +80,7 @@ endif
 
 "autocmd VimEnter * VimFilerExplorer
 if isdirectory(expand('$CACHE/dein/repos/github.com/Shougo/vimfiler'))
-  autocmd VimEnter * VimFiler -split -simple -winwidth=42 -no-quit -no-focus
+  " autocmd VimEnter * VimFiler -split -simple -winwidth=42 -no-quit -no-focus
 endif
 
 augroup vimrc-local
