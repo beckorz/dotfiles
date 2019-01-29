@@ -83,6 +83,7 @@ if isdirectory(expand('$CACHE/dein/repos/github.com/Shougo/vimfiler'))
   " autocmd VimEnter * VimFiler -split -simple -winwidth=42 -no-quit -no-focus
 endif
 
+" Load current project vim_local
 augroup vimrc-local
   autocmd!
   autocmd BufNewFile,BufReadPost * call s:vimrc_local(expand('<afile>:p:h'))
@@ -94,3 +95,11 @@ function! s:vimrc_local(loc)
     source `=i`
   endfor
 endfunction
+
+" Load local environment vimrc
+" ~/vimfiles/rc/vimrc_local.vim
+let s:vimrc_local_file = findfile('vimrc_local.vim', g:vimrc_local_dir.'/rc/;')
+if s:vimrc_local_file !=# ''
+    call s:source_rc('vimrc_local.vim')
+endif
+
