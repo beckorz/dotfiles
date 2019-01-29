@@ -25,7 +25,6 @@ let g:SimpleJsIndenter_CaseIndentLevel = -1
 " Previm
 "let g:previm_open_cmd = 'cmd /c start Firefox'
 "let g:previm_open_cmd = 'cmd /c start C:/tools/Firefox/FirefoxPortable.exe'
-let g:previm_open_cmd = 'C:/tools/Firefox/FirefoxPortable.exe'
 let g:previm_custom_css_path = '$CACHE/dein/repos/github.com/beckorz/previm/preview/_/css/user_custom.css'
 
 "---------------------------------------------------------------------------
@@ -325,6 +324,11 @@ if !exists("g:quickrun_config")
 endif
 
 if has('win32') || has('win64')
+    let g:quickrun_config['html'] = {
+        \   'command': 'mshta',
+        \   'exec': ['%c %o %s'],
+        \ }
+
     let g:quickrun_config['sql/postgres'] = { 
     \   "hook/output_encode/enable" : 1,
     \   "hook/output_encode/encoding" : "&termencoding",
