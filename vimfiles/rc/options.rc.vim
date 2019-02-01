@@ -119,11 +119,27 @@ set iminsert=0
 set imsearch=-1
 
 " ステータス行の表示内容を設定する(statusline)
+set stl=%<          " 切り詰め位置
+set stl+=%f         " ファイル名
+set stl+=\ %m       " 変更チェック[+]
+set stl+=%r         " 読み取り専用[r]
+set stl+=%h         " ヘルプページ[HELP]
+set stl+=%w         " プレビュー[Preview]
+set stl+=[%{(&fenc!=''?&fenc:&enc).(&bomb?'(BOM)':'')}]    " fileencoding + BOM
+set stl+=[%{&ff}]   " fileformat
+set stl+=%y         " filetype
+" Gitのブランチ表示(fugitive)
 if isdirectory(expand('$CACHE/dein/repos/github.com/tpope/vim-fugitive'))
-  set stl=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%{fugitive#statusline()}%=%l,%c%V,0x%02B%8P
-else
-  set stl=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l,%c%V,0x%02B%8P
+    set stl+=%{fugitive#statusline()}
 endif
+set stl+=%=         " 右寄せ
+set stl+=%l         " カーソル行
+set stl+=,
+set stl+=%c         " カーソルの列
+set stl+=%V         " カーソルの列(画面上)
+set stl+=,
+set stl+=0x%02B     " カーソル下の文字コード(HEX表記)
+set stl+=%8P        " %表示
 
 set undodir=~/vimfiles/undo
 
