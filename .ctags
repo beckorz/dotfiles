@@ -1,3 +1,5 @@
+--recurse=yes
+--langmap=Perl:+.cgi
 --langmap=Basic:+.vb.bas.cls.ctl.frm.vbs
 --langmap=HTML:+.wsf.hta
 --exclude=bin
