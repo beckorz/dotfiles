@@ -176,3 +176,8 @@ augroup END
 
 " dein向けには、shellslashが必要だが、noshellslashの方が望ましい
 set noshellslash
+
+" Enable migemo
+if has("migemo")
+    set migemo
+endif
