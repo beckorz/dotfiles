@@ -83,3 +83,7 @@ packages/
 .vimrc.local
 
 sys_inc/
+
+# python
+__pycache__/
+Python_common_library.egg-info
