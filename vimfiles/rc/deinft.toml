@@ -21,12 +21,6 @@ let g:java_highlight_functions=1
 let g:SimpleJsIndenter_BriefMode = 1
 let g:SimpleJsIndenter_CaseIndentLevel = -1
 
-" -------------------------------------------------
-" Previm
-"let g:previm_open_cmd = 'cmd /c start Firefox'
-"let g:previm_open_cmd = 'cmd /c start C:/tools/Firefox/FirefoxPortable.exe'
-let g:previm_custom_css_path = '$CACHE/dein/repos/github.com/beckorz/previm/preview/_/css/user_custom.css'
-
 "---------------------------------------------------------------------------
 "   File Types
 "---------------------------------------------------------------------------
