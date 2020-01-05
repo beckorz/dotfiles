@@ -74,9 +74,6 @@ else
   call s:source_rc('unix.rc.vim')
 endif
 
-if !has('nvim') && has('gui_running')
-  call s:source_rc('gui.rc.vim')
-endif
 
 "autocmd VimEnter * VimFilerExplorer
 if isdirectory(expand('$CACHE/dein/repos/github.com/Shougo/vimfiler'))

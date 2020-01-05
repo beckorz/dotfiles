@@ -181,3 +181,85 @@ set noshellslash
 if has("migemo")
     set migemo
 endif
+
+colorscheme ron
+
+"---------------------------------------------------------------------------
+" Options:"{{{
+hi statement  guifg=white     gui=NONE                " 
+hi LineNr     guifg=#607075   gui=none guibg=black    " 行番号
+hi constant   guifg=magenta   gui=none                " 定数
+hi String     guifg=magenta                           " 文字列のみ
+hi preproc    guifg=red                               " 
+hi Search                              guibg=yellow   " 検索文字列の背景色
+hi type       guifg=lightblue gui=NONE                " 
+hi Normal     guifg=#babdb6            guibg=#151b1d  " 通常文字
+hi SpecialKey guifg=#4f5b5d   gui=none guibg=#2c3032  " タブ等の特殊キー
+hi NonText    guifg=#4f5b5d   gui=none guibg=#232729  " 改行記号等
+hi Function   guifg=#ffaa33                           " 関数
+
+if version >= 700
+  " インテリセンスメニュー
+  hi Pmenu      guifg=magenta guibg=white
+  hi PmenuSel   guifg=red     guibg=lightblue
+  hi PmenuSbar                guibg=lightblue
+
+  hi TabLine      guifg=#446644    guibg=black    gui=None
+  hi TabLineFill  guifg=#232729    guibg=#232729  gui=None
+  hi TabLineSel   guifg=#88ee99    guibg=black    gui=None
+endif
+"}}}
+
+" http://mattn.kaoriya.net/software/vim/20140523124903.htm
+let g:markdown_fenced_languages = [
+    \ 'apache',
+    \ 'autohotkey',
+    \ 'awk',
+    \ 'bash=sh',
+    \ 'bat=dosbatch',
+    \ 'c',
+    \ 'conf',
+    \ 'cpp',
+    \ 'cs',
+    \ 'css',
+    \ 'diff',
+    \ 'dos=dosbatch',
+    \ 'erb=eruby',
+    \ 'html',
+    \ 'ini=dosini',
+    \ 'java',
+    \ 'javascript',
+    \ 'jproperties',
+    \ 'js=javascript',
+    \ 'json=javascript',
+    \ 'make',
+    \ 'ora',
+    \ 'pas=pascal',
+    \ 'perl',
+    \ 'php',
+    \ 'pl=perl',
+    \ 'powershell=ps1',
+    \ 'properties=jproperties',
+    \ 'ps1',
+    \ 'python',
+    \ 'r',
+    \ 'reg=registry',
+    \ 'registry',
+    \ 'ruby',
+    \ 'sass',
+    \ 'sh',
+    \ 'shell=sh',
+    \ 'sql',
+    \ 'vb',
+    \ 'vb.net=vb',
+    \ 'vim',
+    \ 'xml',
+    \]
+
+" 全角空白をハイライト(好みで有効にする) {{{
+augroup HighlightWideSpace
+  au!
+  au VimEnter,ColorScheme * hi WideSpace term=underline ctermbg=gray guibg=gray
+  au VimEnter,WinEnter * match WideSpace /　/
+augroup END
+" }}}
