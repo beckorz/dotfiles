@@ -1,10 +1,9 @@
 "---------------------------------------------------------------------------
 " GUI:
-"
 
-" GUIの時にWindow透過 ※ Override colorscheme and font config
-"gui
-set transparency=230
+" ウィンドウ透過(GUIEnterイベントか、FocusGained等で設定する事
+autocmd FocusGained * set transparency=230
+autocmd FocusLost * set transparency=128
 
 "---------------------------------------------------------------------------
 " Fonts: "{{{
@@ -143,9 +142,5 @@ set guioptions-=T
 set columns=180
 " ウインドウの高さ
 set lines=71
-" コマンドラインの高さ(GUI使用時)
-" set cmdheight=2
-" 画面を黒地に白にする (次行の先頭の " を削除すれば有効になる)
-"colorscheme evening " (GUI使用時)
 " ウインドウ位置
 winpos 190 0
