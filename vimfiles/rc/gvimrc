@@ -2,8 +2,10 @@
 " GUI:
 
 " ウィンドウ透過(GUIEnterイベントか、FocusGained等で設定する事
-autocmd FocusGained * set transparency=230
-autocmd FocusLost * set transparency=128
+if has('kaoriya') || has('mac')
+  autocmd FocusGained * set transparency=230
+  autocmd FocusLost * set transparency=128
+endif
 
 "---------------------------------------------------------------------------
 " Fonts: "{{{
