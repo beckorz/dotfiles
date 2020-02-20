@@ -11,6 +11,7 @@ SET DIR_DOTFILES=%USERPROFILE%\dotfiles
 
 mklink    %DIR_HOME%\.ctags     %DIR_DOTFILES%\.ctags
 mklink    %DIR_HOME%\.gitignore %DIR_DOTFILES%\.gitignore
+mklink    %DIR_HOME%\.gitconfig %DIR_DOTFILES%\.gitconfig
 mklink    %DIR_HOME%\.jshintrc  %DIR_DOTFILES%\.jshintrc
 mklink    %DIR_HOME%\.minttyrc  %DIR_DOTFILES%\.minttyrc
 mklink    %DIR_HOME%\.vimrc     %DIR_DOTFILES%\.vimrc
