@@ -125,7 +125,8 @@ REM SET TESSDATA_PREFIX=%TESSERACT_PATH%\tessdata
 SET PATH=%PATH%;%TESSERACT_PATH%
 
 REM *** Oracle
-SET ORACLE_HOME=c:\dev\oracle\instantclient_10_2_x86
+REM SET ORACLE_HOME=c:\dev\oracle\instantclient_10_2_x86
+SET ORACLE_HOME=C:\dev\oracle\OracleInstantClient\x64\instantclient_19_3
 SET TNS_ADMIN=c:\dev\oracle\instantclient_10_2_x86
 SET NLS_LANG=American_america.AL32UTF8
 SET PATH=%ORACLE_HOME%;%ORACLE_HOME%\bin;%PATH%

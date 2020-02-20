@@ -1,0 +1,6 @@
+[core]
+	excludesfile = ~/.gitignore
+ 
+[include]
+	# user.name/user.email等は別ファイル読込(上書き)
+	path = .gitconfig.local
