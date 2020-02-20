@@ -105,9 +105,6 @@ repo = 'Shougo/vimfiler'
 repo = 'PProvost/vim-ps1.git'
 
 [[plugins]]
-repo = 'vim-scripts/taglist.vim'
-
-[[plugins]]
 repo = 'majutsushi/tagbar'
 
 [[plubins]]
@@ -121,4 +118,20 @@ repo = 'LeafCage/foldCC.vim'
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
+
+# vim-lsp
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
 
