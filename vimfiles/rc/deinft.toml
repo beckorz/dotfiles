@@ -80,6 +80,9 @@ au BufNewFile,BufRead *.bpg,*.BPG set ft=make|setlocal makeprg=make\ -f\ %
 " VMware .vmx Config File = INI file for MSDOS
 au BufNewFile,BufRead *.vmx,*.VMX set ft=dosini
 
+" gitconfig.*
+au BufNewFile,BufRead *.gitconfig.* setf gitconfig 
+
 " -------------------------------------------------
 " Neocomplete
 
