@@ -2,5 +2,8 @@
     excludesfile = ~/.gitignore
     autoCRLF = false
 
+[commit]
+    template = ~/.commit_template
+
 [include]
     path = ~/.gitconfig.main

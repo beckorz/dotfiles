@@ -1,0 +1,103 @@
+
+
+# ==== Emojis ====
+# 🐛  :bug: バグ修正
+# 👍  :+1: 機能改善
+# ✨  :sparkles:  部分的な機能追加(Introducing new features.)
+# 🎉  :tada: 盛大に祝うべき大きな機能追加、初期コミット(Initial commit.)
+# ♻️  :recycle: リファクタリング(Refactoring code.)
+# 🚿  :shower: 不要な機能・使われなくなった機能の削除
+# 💚  :green_heart: テストやCIの修正・改善
+# 👕  :shirt: Lintエラーの修正やコードスタイルの修正
+# 🚀  :rocket: パフォーマンス改善(Deploying stuff.)
+# 🆙  :up: 依存パッケージなどのアップデート
+# 🔒  :lock: 新機能の公開範囲の制限
+# 👮  :cop: セキュリティ関連の改善(Fixing security issues.)
+# 🔒  :lock: Fixing security issues.
+# 📝  :memo: ドキュメント追加(Writing docs.)
+# 🔉  :sound: ログ追加(Adding logs.)
+# 🔇  :mute: ログ削除(Removing logs.)
+# ✅  :white_check_mark: テストの追加(Updating tests.)
+# 🎨  :art: UI/UX変更
+# 🚧  :construction: コメントアウト、WIPなど(Work in progress.)
+# 🔖  :bookmark: リリース、tag付け(Releasing / Version tags.)
+# 🔥  :fire: Removing code or files.
+# 🚑  :ambulance: Critical hotfix.
+# 🍎  :apple: Fixing something on macOS.
+# 🐧  :penguin: Fixing something on Linux.
+# 🏁  :checkered_flag: Fixing something on Windows.
+# 🤖  :robot:Fixing something on Android.
+# 🍏  :green_apple: Fixing something on iOS.
+# 🚨  :rotating_light: Removing linter warnings.
+# 💚  :green_heart: Fixing CI Build.
+# ⬇️  :arrow_down:Downgrading dependencies.
+# ⬆️  :arrow_up: Upgrading dependencies.
+# 📌  :pushpin: Pinning dependencies to specific versions.
+# 👷  :construction_worker: Adding CI build system.
+# 📈  :chart_with_upwards_trend: Adding analytics or tracking code.
+# 🐳  :whale: Work about Docker.
+# ➕  :heavy_plus_sign: 依存性追加(Adding a dependency.)
+# ➖  :heavy_minus_sign: 依存性削除(Removing a dependency.)
+# 🔧  :wrench: ツール、設定ファイル変更、(Changing configuration files.)
+# 🌐  :globe_with_meridians:Internationalization and localization.
+# ✏️  :pencil2: Typo修正(Fixing typos.)
+# 💩  :poop: Writing bad code that needs to be improved.
+# ⏪  :rewind: Reverting changes.
+# 🔀  :twisted_rightwards_arrows: ブランチマージ(Merging branches.)
+# 📦  :package: Updating compiled files or packages.
+# 👽  :alien: Updating code due to external API changes.
+# 🚚  :truck: ファイル移動や、ファイル名変更(Moving or renaming files.)
+# 📄  :page_facing_up: Adding or updating license.
+# 💥  :boom: Introducing breaking changes.
+# 🍱  :bento: Adding or updating assets.
+# 👌  :ok_hand: Updating code due to code review changes.
+# ♿️  :wheelchair: Improving accessibility.
+# 💡  :bulb: Documenting source code.
+# 🍻  :beers: Writing code drunkenly.
+# 💬  :speech_balloon: Updating text and literals.
+# 🗃  :card_file_box: Performing database related changes.
+# 👥  :busts_in_silhouette: Adding contributor(s).
+# 🚸  :children_crossing: Improving user experience / usability.
+# 🏗  :building_construction: Making architectural changes.
+# 📱  :iphone: Working on responsive design.
+# 🤡  :clown_face: Mocking things.
+# 🥚  :egg: Adding an easter egg.
+# 🙈  :see_no_evil: Adding or updating a .gitignore file
+# 📸  :camera_flash: Adding or updating snapshots
+# ⚗   :alembic: Experimenting new things
+# 🔍  :mag: Improving SEO
+# ☸️   :wheel_of_dharma: Work about Kubernetes
+# 🏷️  :label: Adding or updating types (Flow, TypeScript)
+# 🌱  :seedling: Adding or updating seed files
+# 🚩  :triangular_flag_on_post: Adding, updating, or removing feature flags
+# 🥅  :goal_net: Catching errors
+# 💫  :dizzy: Adding or updating animations and transitions
+# 🗑  :wastebasket: 依存性コード削除、Deprecating code that needs to be cleaned up.
+#
+# ==== [Type] ====
+# [Add] ファイル追加、機能追加
+# [Improve] 改善
+# [Remove] 削除
+# [Rename] 名称変更
+# [Refactor] リファクタリング
+# [Move] 移動
+# [Change] 変更
+# [Fix] バグ修正
+
+# ==== Format ====
+# :Emoji:[Type] Subject
+#
+# Commit body...
+
+# ==== The Seven Rules ====
+# 1. Separate subject from body with a blank line
+# 2. Limit the subject line to 50 characters
+# 3. Capitalize the subject line
+# 4. Do not end the subject line with a period
+# 5. Use the imperative mood in the subject line
+# 6. Wrap the body at 72 characters
+# 7. Use the body to explain what and why vs. how
+#
+# How to Write a Git Commit Message http://chris.beams.io/posts/git-commit/
+
+# for http://memo.goodpatch.co/2016/07/beautiful-commits-with-emojis/
