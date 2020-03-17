@@ -243,6 +243,7 @@ let g:markdown_fenced_languages = [
     \ 'ps1',
     \ 'python',
     \ 'r',
+    \ 'rc',
     \ 'reg=registry',
     \ 'registry',
     \ 'ruby',
