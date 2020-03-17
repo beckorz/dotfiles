@@ -25,11 +25,20 @@ function! s:source_rc(path, ...) abort
   endtry
 endfunction
 
+function! s:on_filetype() abort
+  if execute('filetype') =~# 'OFF'
+    " Lazy loading
+    silent! filetype plugin indent on
+    syntax enable
+    filetype detect
+  endif
+endfunction
+
 " Set augroup.
 augroup MyAutoCmd
   autocmd!
   autocmd FileType,Syntax,BufNewFile,BufNew,BufRead *?
-        \ call vimrc#on_filetype()
+        \ call s:on_filetype()
   autocmd CursorHold *.toml syntax sync minlines=300
 augroup END
 
@@ -42,7 +51,7 @@ if g:vimrc_has_dein
 endif
 
 if has('vim_starting') && !empty(argv())
-  call vimrc#on_filetype()
+  call s:on_filetype()
 endif
 
 if !has('vim_starting')
