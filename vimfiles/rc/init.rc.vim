@@ -74,7 +74,9 @@ if s:dein_dir != '' || &runtimepath !~ '/dein.vim'
 endif
 
 " Disable packpath
-set packpath=
+if v:version >= 800
+  set packpath=
+endif
 
 "---------------------------------------------------------------------------
 " Disable default plugins
