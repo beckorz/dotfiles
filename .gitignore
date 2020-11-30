@@ -20,6 +20,9 @@ tags
 # Office Temp Files
 ~$*
 
+#C/C++
+*.o
+
 #Visual Studio files
 *.[Oo]bj
 *.user
