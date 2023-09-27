@@ -44,7 +44,8 @@ if has('win32') || has('win64')
   "set guifontwide=Myrica_M:h11
   "set guifontwide=MeiryoKe_Console:h10
   "set guifontwide=MeiryoKe_Console:h9
-  set guifontwide=NasuM:h9
+  set guifontwide=FirgeNerd_Console:h9
+  "set guifontwide=NasuM:h9
 
   " Number of pixel lines inserted between characters.
   set linespace=1
