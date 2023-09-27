@@ -24,6 +24,8 @@ tags
 *.o
 
 #Visual Studio files
+*.scc
+*.vbw
 *.[Oo]bj
 *.user
 *.aps
