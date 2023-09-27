@@ -108,7 +108,7 @@ set confirm
 set lcs=tab:>-,eol:$,extends:>
 
 " タブを表示 1:2つ以上だったら表示 2:常に表示
-set showtabline=2
+set showtabline=1
 
 " gVimでもテキストベースのタブページを使う
 "set guioptions-=e

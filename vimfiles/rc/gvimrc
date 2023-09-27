@@ -140,6 +140,8 @@ endif
 
 " ツールバーを削除
 set guioptions-=T
+" メニューを削除
+set guioptions-=m
 
 " ウインドウの幅
 set columns=180
