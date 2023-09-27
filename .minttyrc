@@ -1,6 +1,6 @@
-BoldAsFont=-1
+BoldAsFont=yes
 Transparency=high
-Font=Consolas
+Font=FirgeNerd Console
 Locale=ja_JP
 Charset=UTF-8
 OpaqueWhenFocused=no
