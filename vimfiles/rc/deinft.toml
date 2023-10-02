@@ -318,6 +318,27 @@ if !exists("g:quickrun_config")
         \ 'outputter/buffer/split'  : ':rightbelow 8sp',
         \ 'outputter/buffer/close_on_empty' : 1,
         \ }
+    let g:quickrun_config['sql/oracle'] = {
+        \   'command': 'sqlplus',
+        \   'exec': ['%c %o \@%s'],
+        \   'hook/output_encode/enable' : 1,
+        \   'hook/output_encode/encoding' : '&termencoding'
+        \}
+        "\ 'exec': '%c %o \@%s',
+        "\ 'command': 'sqlplus',
+        "\ 'cmdopt': '-S %{get(g:, "quickrun_oracle_conn", "/nolog")}',
+        "\ 'hook/output_encode/encoding': 'sjis',
+        "\ 'hook/eval/enable': 1,
+        "\ 'hook/eval/template':
+        "\   'set echo off' . "\r" .
+        "\   'set linesize 1000' . "\r" .
+        "\   'set trimspool on' . "\r" .
+        "\   'set feedback off' . "\r" .
+        "\   'set colsep ","' . "\r" .
+        "\   'set heading on' . "\r" .
+        "\   'set underline off' . "\r" .
+        "\   '%s',
+        "\}
 endif
 
 if has('win32') || has('win64')
