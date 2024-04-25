@@ -221,6 +221,7 @@ let g:markdown_fenced_languages = [
     \ 'conf',
     \ 'cpp',
     \ 'cs',
+    \ 'csharp=cs',
     \ 'css',
     \ 'diff',
     \ 'dos=dosbatch',
