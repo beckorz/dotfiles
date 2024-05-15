@@ -91,9 +91,9 @@ SET PATH=%PATH%;%SBT_HOME%\bin
 
 REM *** Git
 SET GIT_PATH=C:\Program Files\Git\
-SET GIT_BIN=C:\Program Files\Git\mingw64\bin
-SET GIT_USER_PATH=C:\Program Files\Git\usr\bin
-SET PATH=%PATH%;%GIT_USER_PATH%;%GIT_PATH%;%GIT_BIN%
+SET GIT_BIN=%GIT_PATH%\mingw64\bin
+SET GIT_USER_PATH=%GIT_PATH%\usr\bin
+SET PATH=%GIT_USER_PATH%;%GIT_PATH%;%GIT_BIN%;%PATH%
 
 REM *** Python
 SET PYTHON3PATH=C:\Python\python37\
