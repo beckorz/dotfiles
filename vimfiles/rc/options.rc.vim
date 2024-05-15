@@ -257,6 +257,7 @@ let g:markdown_fenced_languages = [
     \ 'vim',
     \ 'xml',
     \ 'yaml',
+    \ 'yml=yaml',
     \]
 
 " 全角空白をハイライト(好みで有効にする) {{{
