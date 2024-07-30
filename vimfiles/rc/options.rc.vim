@@ -502,6 +502,7 @@ let g:lsp_diagnostics_virtual_text_enabled = 0           "
 "let g:lsp_diagnostics_signs_hint = {'text': '💡'}
 "let g:lsp_diagnostics_signs_warning = {'text': '⚠️'}
 "let g:lsp_diagnostics_signs_error = {'text': '❌'}
+"let g:lsp_log_file = 'lsp.log'
 
 let g:lsp_settings = {
 \ 'pylsp-all': {
