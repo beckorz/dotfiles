@@ -481,3 +481,43 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Settings LSP
+" @see: https://github.com/prabirshrestha/vim-lsp/blob/master/doc/vim-lsp.txt
+let g:lsp_diagnostics_enabled = 1                        " Diagnosticsを有効にする
+let g:lsp_diagnostics_echo_cursor = 1                    " カーソル下のエラー、警告、情報、ヒントを画面下部のコマンド ラインに表示
+let g:lsp_diagnostics_echo_delay = 50                    " Diagnosticsの表示の遅延を50msに設定
+let g:lsp_diagnostics_float_cursor = 1                   " カーソル下のエラー、警告、情報、ヒントをフロート表示
+let g:lsp_diagnostics_signs_enabled = 1                  " 画面左端のサイン列にエラー、警告、情報、ヒントのアイコンを 表示
+let g:lsp_diagnostics_signs_delay = 50                   " Diagnosticsのサイン列の表示の遅延を50msに設定
+let g:lsp_diagnostics_signs_insert_mode_enabled = 0      " 挿入モード時、Diagnosticsのサイン列を表示しない
+let g:lsp_diagnostics_highlights_delay = 50              " Diagnosticsの指摘箇所自体の文字ハイライト表示の遅延を50msに設定
+let g:lsp_diagnostics_highlights_insert_mode_enabled = 0 " 挿入モード時、Diagnosticsの指摘箇所自体の文字ハイライトを表示しない
+let g:lsp_document_code_action_signs_enabled = 0         " 画面左端のサイン列にコードアクションのアイコン非表示
+let g:lsp_diagnostics_virtual_text_enabled = 0           " 
+"let g:lsp_diagnostics_virtual_text_align = 'right'       " 
+"let g:lsp_diagnostics_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
+"let g:lsp_diagnostics_signs_warning = {'text': '', 'icon': '/path/to/some/icon'} " icons require GUI
+"let g:lsp_diagnostics_signs_hint = {'text': '💡'}
+"let g:lsp_diagnostics_signs_warning = {'text': '⚠️'}
+"let g:lsp_diagnostics_signs_error = {'text': '❌'}
+
+let g:lsp_settings = {
+\ 'pylsp-all': {
+\   'workspace_config': {
+\     'pylsp': {
+\       'plugins': {
+\         'pycodestyle': {
+"\           'ignore': ["E221", "E501"]
+\           'ignore': ["E501"]
+\         }
+\       }
+\     }
+\   }
+\ },
+\ 'efm-langserver': {
+\   'disabled': 0,
+\   'allowlist': ['markdown'],
+\ },
+\}
