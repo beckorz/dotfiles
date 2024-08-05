@@ -7,7 +7,7 @@ tools:
     lint-ignore-exit-code: true
     lint-stdin: true
     lint-formats:
-      - '%f:%l:%c: %m [%trror/%r]'
+      - '%f:%l:%c: %m'
     root-markers:
       - .textlintrc
 languages:
