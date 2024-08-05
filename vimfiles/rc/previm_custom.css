@@ -1,0 +1,518 @@
+@charset "utf-8";
+
+/* 全体設定 */
+
+body {
+  font-family: meiryo, メイリオ, consolas, helvetica,arial,freesans,clean,sans-serif,Segoe UI Emoji !important;
+  font-size: 80% !important;
+  margin: 0;
+}
+
+pre, code {
+  font: 12px Consolas, 'Bitstream Vera Sans Mono','Courier',monospace;
+}
+pre code {
+  display: block;
+}
+
+ul, ol {
+  margin: 0px;
+}
+
+ul li, ol li {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+li {
+  line-height: 20px;
+}
+
+/* h1 centering */
+h1 { text-align:center; }
+
+/* print */
+@media print {
+  #header { display:none; }
+  #last-modified { display:none; }
+  #js-toc { display:none; }
+  #pdf { display:none; }
+}
+
+/* lightGallery */
+@media screen, print {
+  .lightgallery-default {
+    display: inline;
+  }
+  .lightGallery-img {
+    max-width: 50%;
+    padding: 4px;
+    border: 1px solid #cccccc;
+    margin: 30px;
+    -webkit-box-shadow: 1px 2px 40px rgba(0,0,0,.5);
+       -moz-box-shadow: 1px 2px 40px rgba(0,0,0,.5);
+            box-shadow: 1px 2px 40px rgba(0,0,0,.5);
+  }
+}
+@media screen {
+  .lightGallery-img {
+    max-width: 50%;
+  }
+}
+@media print {
+  .lightGallery-img {
+    max-width: 70%;
+  }
+}
+
+/* highlight.js */
+.hljs { word-wrap: normal; }
+@media print {
+  .hljs {
+      /* max-width: 70%; */
+  }
+}
+
+/* modify tocify.js style */
+.nav-list > li > a {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-list > .active > a {
+    background-color: rgba(0, 136, 255, 0.5) !important;
+}
+.nav-list > .active > a:hover {
+    background-color: rgba(0, 136, 255, 0.8) !important;
+}
+.nav > li > a:hover {
+    background-color: rgba(238, 238, 238, 0.8) !important;
+}
+/* li p がネストした際に高さが微妙にスペース空いて気持ち悪いのでマージン消し */
+p {
+    margin: 3px 0px;
+}
+
+/* 下余白が無駄に大きいので小さく */
+blockquote {
+  margin: 0;
+}
+
+/* フォントが大きいので小さく */
+blockquote p {
+  font-size: 100%;
+}
+
+/*
+h2 {
+    border-left: 5px solid #000000;
+    padding: 0 0 0 10px;
+}
+*/
+
+/** fix table layout */
+table { font-size: 100%; }  /** table が若干でかいのでもとに戻す */
+table tr th, table tr td { padding: 3px 7px; } /** 余白も若干デカいので小さめに */
+
+/** remove font-style */
+.hljs-comment {
+    /* color: #0f0 !important; */
+    color: #008000!important;
+    font-style: normal !important;
+}
+
+/**
+ * GitHub task list
+ */
+.task-list-item {
+    list-style-type: none; /* style off */
+}
+
+.task-list-item-checkbox {
+    float: left;
+    margin-left: -20px !important; /* リストスタイルへ位置をずらす */
+    margin-top: 6px;
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+    margin: 4px 5px 0 0;
+}
+
+/**
+ * TOC Responsive
+ */
+@media (max-width: 767px) {
+    #js-toc {
+        position: relative;
+        width: 100%;
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+.toc-list {
+    overflow: hidden;
+    position: relative;
+}
+
+li.toc-list-item {
+    list-style: none;
+}
+
+.js-toc {
+    width: 25%;
+    max-height: 90%;
+    overflow: auto;
+    margin-left: 70%;
+    border: 1px solid #ccc;
+    webkit-border-radius: 6px;
+    moz-border-radius: 6px;
+    border-radius: 6px;
+    position: fixed;
+    display: block;
+    z-index: 1;
+    transform: translateX(0);
+    /* right: calc((100% - 48rem - 4rem)/2); */
+}
+
+a.toc-link {
+    text-decoration: none;
+}
+
+#markdown-body h1:hover .anchor,
+#markdown-body h2:hover .anchor,
+#markdown-body h3:hover .anchor,
+#markdown-body h4:hover .anchor,
+#markdown-body h5:hover .anchor,
+#markdown-body h6:hover .anchor {
+    margin-left: -30px;
+    padding-left: 8px;
+    text-decoration: none;
+}
+#markdown-body h1:hover .anchor .octicon-link,
+#markdown-body h2:hover .anchor .octicon-link,
+#markdown-body h3:hover .anchor .octicon-link,
+#markdown-body h4:hover .anchor .octicon-link,
+#markdown-body h5:hover .anchor .octicon-link,
+#markdown-body h6:hover .anchor .octicon-link {
+    display: inline-block;
+}
+
+/* override heading style
+h1 code {
+  font-size: 36px;
+  line-height: 40px;
+}
+h2 code {
+  font-size: 30px;
+  line-height: 40px;
+}
+h3 code {
+  font-size: 24px;
+  line-height: 40px;
+}
+h4 code {
+  font-size: 18px;
+  line-height: 20px;
+}
+h5 code {
+  font-size: 14px;
+  line-height: 20px;
+}
+h6 code {
+  font-size: 12px;
+  line-height: 20px;
+}
+ */
+ 
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 #bbb;
+  box-shadow: inset 0 -1px 0 #bbb;
+  font-family: monospace, serif;
+}
+
+/* 上部marginを多めに */
+h1, h2, h3, h4, h5, h6 {
+  margin: 30px 0 10px 0;
+}
+
+.code-lang {
+  color: #eee;
+  display: inline-block;
+  background-color: #777;
+  padding: 2px 4px;
+  transform: translateY(-1em);
+  word-break: break-all;
+  margin-top: 6px;
+}
+
+input[type="checkbox"] + label {
+  margin-left: 0.5ex;
+}
+
+/* Snippet */
+pre:hover .btn, pre .btn:focus {
+    opacity: 1;
+}
+
+.btn:hover, .btn:active, .btn.zeroclipboard-is-hover, .btn.zeroclipboard-is-active {
+    text-decoration: none;
+    background-color: #ddd;
+    background-image: linear-gradient(#eee,#ddd);
+    border-color: #ccc;
+}
+
+.clippy {
+    margin-top: -3px;
+    position: relative;
+    top: 3px;
+}
+
+pre .btn {
+    -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+
+pre {
+    position: relative;
+    overflow:visible;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc,#eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+}
+
+.btn[disabled] .clippy {
+    opacity: .3
+}
+
+.tooltipped {
+    position: absolute
+}
+
+.tooltipped:after {
+    position: absolute;
+    z-index: 1000000;
+    display: none;
+    padding: 5px 8px;
+    font: normal normal 11px/1.5 Helvetica,arial,nimbussansl,liberationsans,freesans,clean,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: break-word;
+    white-space: pre;
+    pointer-events: none;
+    content: attr(aria-label);
+    background: rgba(0,0,0,.8);
+    border-radius: 3px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.tooltipped:before {
+    position: absolute;
+    z-index: 1000001;
+    display: none;
+    width: 0;
+    height: 0;
+    color: rgba(0,0,0,.8);
+    pointer-events: none;
+    content: "";
+    border: 5px solid transparent
+}
+
+.tooltipped:hover:before,.tooltipped:hover:after,.tooltipped:active:before,.tooltipped:active:after,.tooltipped:focus:before,.tooltipped:focus:after {
+    display: inline-block;
+    text-decoration: none
+}
+
+.tooltipped-multiline:hover:after,.tooltipped-multiline:active:after,.tooltipped-multiline:focus:after {
+    display: table-cell
+}
+
+.tooltipped-s:after,.tooltipped-se:after,.tooltipped-sw:after {
+    top: 100%;
+    right: 50%;
+    margin-top: 5px
+}
+
+.tooltipped-s:before,.tooltipped-se:before,.tooltipped-sw:before {
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    margin-right: -5px;
+    border-bottom-color: rgba(0,0,0,.8)
+}
+
+.tooltipped-se:after {
+    right: auto;
+    left: 50%;
+    margin-left: -15px
+}
+
+.tooltipped-sw:after {
+    margin-right: -15px
+}
+
+.tooltipped-n:after,.tooltipped-ne:after,.tooltipped-nw:after {
+    right: 50%;
+    bottom: 100%;
+    margin-bottom: 5px
+}
+
+.tooltipped-n:before,.tooltipped-ne:before,.tooltipped-nw:before {
+    top: -5px;
+    right: 50%;
+    bottom: auto;
+    margin-right: -5px;
+    border-top-color: rgba(0,0,0,.8)
+}
+
+.tooltipped-ne:after {
+    right: auto;
+    left: 50%;
+    margin-left: -15px
+}
+
+.tooltipped-nw:after {
+    margin-right: -15px
+}
+
+.tooltipped-s:after,.tooltipped-n:after {
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%)
+}
+
+.tooltipped-w:after {
+    right: 100%;
+    bottom: 50%;
+    margin-right: 5px;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%)
+}
+
+.tooltipped-w:before {
+    top: 50%;
+    bottom: 50%;
+    left: -5px;
+    margin-top: -5px;
+    border-left-color: rgba(0,0,0,.8)
+}
+
+.tooltipped-e:after {
+    bottom: 50%;
+    left: 100%;
+    margin-left: 5px;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%)
+}
+
+.tooltipped-e:before {
+    top: 50%;
+    right: -5px;
+    bottom: 50%;
+    margin-top: -5px;
+    border-right-color: rgba(0,0,0,.8)
+}
+
+.tooltipped-multiline:after {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 250px;
+    word-break: break-word;
+    word-wrap: normal;
+    white-space: pre-line;
+    border-collapse: separate
+}
+
+.tooltipped-multiline.tooltipped-s:after,.tooltipped-multiline.tooltipped-n:after {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.tooltipped-multiline.tooltipped-w:after,.tooltipped-multiline.tooltipped-e:after {
+    right: 100%
+}
+
+@media screen and (min-width: 0\0) {
+    .tooltipped-multiline:after {
+        width:250px
+    }
+}
+
+.tooltipped-sticky:before,.tooltipped-sticky:after {
+    display: inline-block
+}
+
+.tooltipped-sticky.tooltipped-multiline:after {
+    display: table-cell
+}
+
+.fullscreen-overlay-enabled.dark-theme .tooltipped:after {
+    color: #000;
+    background: rgba(255,255,255,.8)
+}
+
+.fullscreen-overlay-enabled.dark-theme .tooltipped .tooltipped-s:before,.fullscreen-overlay-enabled.dark-theme .tooltipped .tooltipped-se:before,.fullscreen-overlay-enabled.dark-theme .tooltipped .tooltipped-sw:before {
+    border-bottom-color: rgba(255,255,255,.8)
+}
+
+.fullscreen-overlay-enabled.dark-theme .tooltipped.tooltipped-n:before,.fullscreen-overlay-enabled.dark-theme .tooltipped.tooltipped-ne:before,.fullscreen-overlay-enabled.dark-theme .tooltipped.tooltipped-nw:before {
+    border-top-color: rgba(255,255,255,.8)
+}
+
+.fullscreen-overlay-enabled.dark-theme .tooltipped.tooltipped-e:before {
+    border-right-color: rgba(255,255,255,.8)
+}
+
+.fullscreen-overlay-enabled.dark-theme .tooltipped.tooltipped-w:before {
+    border-left-color: rgba(255,255,255,.8)
+}
