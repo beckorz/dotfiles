@@ -1,6 +1,6 @@
 version: 2
 # log-file: ./efm-langserver_output.log
-# log-level: 1
+# log-level: 5
 tools:
   markdown-textlint: &markdown-textlint
     lint-command: 'npx --no-install textlint -f unix --stdin --stdin-filename ${INPUT}'
