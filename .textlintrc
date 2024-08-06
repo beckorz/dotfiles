@@ -1,5 +1,15 @@
 {
-  "filters": {},
+  "plugins": {},
+  "filters": {
+    "allowlist": {
+      "allow": [
+        "/```[\\s\\S]*?```/m",
+        "/\\[.*?\\]\\(.*\\)/",
+        "/===IGNORE===[\\s\\S]*?===/IGNORE===/m"
+      ]
+    },
+    "comments": true
+  },
   "rules": {
     "preset-ja-technical-writing": {
       "ja-no-weak-phrase": false,
