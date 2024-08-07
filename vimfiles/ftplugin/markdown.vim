@@ -31,3 +31,5 @@
 " \ }
 " 
 " autocmd VimEnter * nested :TagbarOpen
+
+set completeslash=slash
