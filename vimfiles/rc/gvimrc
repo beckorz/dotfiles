@@ -2,9 +2,17 @@
 " GUI:
 
 " ウィンドウ透過(GUIEnterイベントか、FocusGained等で設定する事
-if has('kaoriya') || has('mac')
+if has('gui_running') && (has('kaoriya') || has('mac'))
   autocmd FocusGained * set transparency=230
   autocmd FocusLost * set transparency=128
+elseif has('gui_running') && (has('win32') || has('win64'))
+  " vim.exeと同一フォルダにdllの存在確認
+  let s:dll_name = (has('win64') ? 'vimtweak64.dll' : 'vimtweak32.dll')
+  let s:dll_name = expand('$VIMRUNTIME/' . s:dll_name)
+  if filereadable(s:dll_name)
+    autocmd FocusGained * :call libcallnr(s:dll_name, "SetAlpha", 230)
+    autocmd FocusLost * :call libcallnr(s:dll_name, "SetAlpha", 128)
+  endif
 endif
 
 "---------------------------------------------------------------------------
