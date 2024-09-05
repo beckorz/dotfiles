@@ -89,8 +89,8 @@ repo = 'thinca/vim-quickrun'
 [[plugins]]
 repo = 'osyo-manga/vim-over'
 
-[[plugins]]
-repo = 'Shougo/neocomplete.vim'
+#[[plugins]]
+#repo = 'Shougo/neocomplete.vim'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
@@ -99,8 +99,8 @@ repo = 'Shougo/neomru.vim'
 repo = 'Shougo/unite.vim'
 depends = 'neomru.vim'
 
-[[plugins]]
-repo = 'Shougo/vimfiler'
+#[[plugins]]
+#repo = 'Shougo/vimfiler'
 
 [[plugins]]
 repo = 'PProvost/vim-ps1.git'
@@ -137,3 +137,34 @@ repo = 'prabirshrestha/vim-lsp'
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
 
+# fern
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+
+[[plugins]]
+repo = 'lambdalisue/nerdfont.vim'
+on_source = ['fern.vim']
+
+[[plugins]]
+repo = 'lambdalisue/fern-renderer-nerdfont.vim'
+on_source = ['fern.vim']
+
+[[plugins]]
+repo = 'brandon1024/fern-renderer-nf.vim'
+on_source = ['fern.vim']
+
+[[plugins]]
+repo = 'lambdalisue/vim-fern-git-status'
+on_source = ['fern.vim']
+
+[[plugins]]
+repo = 'lambdalisue/glyph-palette.vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
