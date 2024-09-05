@@ -501,7 +501,7 @@ let g:lsp_diagnostics_virtual_text_enabled = 0           "
 "let g:lsp_diagnostics_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
 "let g:lsp_diagnostics_signs_warning = {'text': '', 'icon': '/path/to/some/icon'} " icons require GUI
 "let g:lsp_diagnostics_signs_hint = {'text': '💡'}
-"let g:lsp_diagnostics_signs_warning = {'text': '⚠️'}
+"let g:lsp_diagnostics_signs_warning = {'text': '⚠'}
 "let g:lsp_diagnostics_signs_error = {'text': '❌'}
 "let g:lsp_log_file = 'lsp.log'
 
@@ -520,6 +520,6 @@ let g:lsp_settings = {
 \ },
 \ 'efm-langserver': {
 \   'disabled': 0,
-\   'allowlist': ['markdown'],
+\   'allowlist': ['markdown', 'text'],
 \ },
 \}
