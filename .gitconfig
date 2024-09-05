@@ -7,3 +7,19 @@
 
 [include]
     path = ~/.gitconfig.main
+
+[alias]
+    ll = log \
+         --graph \
+         --topo-order \
+         --decorate \
+         --all \
+         --boundary \
+         --date=short \
+         --abbrev-commit \
+         --pretty=format:'%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue[%aN]%Creset %Cblue%G?%Creset'
+    tree = log --graph --date-order --date=short --pretty=format:'%C(auto) %h %Creset"%C(cyan ul)%an%Creset"%C(auto)%d %s %Cgreen%ar'
+    treed = log --graph --date-order --date=short --pretty=format:'%C(auto)%h%Creset %Cgreen%ad%Creset "%C(cyan ul)%an%Creset"%C(auto)%d %s'
+    trees = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+    treet = log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09by"%C(cyan ul)%an%Creset" %x09%C(auto)%s %d
+
