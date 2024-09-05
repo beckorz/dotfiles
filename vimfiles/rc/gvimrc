@@ -119,10 +119,17 @@ if v:version >= 700
 endif
 
 colorscheme ron
+" colorscheme gruvbox
+" colorscheme catppuccin_latte
+" colorscheme catppuccin_frappe
+" colorscheme catppuccin_macchiato
+" colorscheme catppuccin_mocha
+" colorscheme iceberg
+" colorscheme tender
 
 "---------------------------------------------------------------------------
 " Options:"{{{
-hi Comment    guifg=#00ff00                           " コメント
+hi Comment    guifg=#00ff00 gui=NONE                   " コメント
 hi Title        term=bold cterm=bold ctermfg=13 gui=bold guifg=#b8bb26
 hi StatusLine   term=bold,reverse cterm=bold,reverse gui=bold,reverse guifg=#504945 guibg=#ebdbb2
 hi StatusLineNC term=reverse      cterm=reverse      gui=reverse      guifg=#3c3836 guibg=#a89984
@@ -147,7 +154,8 @@ hi Special                             guifg=#fe8019
 hi SpecialKey guifg=#4f5b5d   gui=none guibg=#2c3032  " タブ等の特殊キー
 hi NonText    guifg=#4f5b5d   gui=none guibg=#232729  " 改行記号等
 hi Function   guifg=#ffaa33                           " 関数
-hi VertSplit  guifg=#232729   guibg=#bgbdb6
+"hi VertSplit  guifg=#232729   guibg=#bgbdb6
+hi VertSplit  guifg=#bgbdb6   guibg=#232729
 
 if version >= 700
   " インテリセンスメニュー

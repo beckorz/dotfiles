@@ -142,6 +142,7 @@ set stl+=0x%02B     " カーソル下の文字コード(HEX表記)
 set stl+=%8P        " %表示
 
 set undodir=~/vimfiles/undo
+set undofile
 
 set directory=~/vimfiles/tmp
 
