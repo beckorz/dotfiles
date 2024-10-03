@@ -409,7 +409,7 @@ autocmd BufNewFile,BufRead *.trac set filetype=moin
 autocmd FileType javascript :compiler javascriptlint
 
 "-------------------------------------------------------------------[vb]----
-autocmd BufNewFile,BufRead *.bas,*.cls set filetype=vb
+autocmd BufNewFile,BufRead *.bas,*.cls,*.dcm,*.frm set filetype=vb
 
 "-----------------------------------------------------------------[moin]----
 
