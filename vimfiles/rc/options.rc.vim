@@ -322,7 +322,7 @@ if !exists("g:quickrun_config")
          \   'runner'    : 'vimproc',
          \   'runner/vimproc/updatetime' : 60,
          \   'hook/time/enable': 1,
-         \   'outputter/buffer/into': 1,
+         \   'outputter/buffer/into': 0,
          \   'outputter/buffer/opener': 'vnew',
          \   'outputter/buffer/close_on_empty': 1,
          \ }
