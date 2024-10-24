@@ -2,7 +2,9 @@
 
 prompt $G 
 
-REM cd /d %~dp0
+pushd %CD%
+
+cd /d %~dp0
 
 REM ***************************************************************************
 REM Below alias command.
@@ -157,6 +159,13 @@ SET CMAKE_BIN=%CMAKE_PATH%\bin
 SET PATH=%PATH%;%CMAKE_BIN%
 
 SET LANG=ja_JP.UTF-8
+
+REM Load init_local.cmd
+if exist init_local.cmd (
+  call init_local.cmd
+)
+
+popd
 
 cls
 
