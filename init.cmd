@@ -43,7 +43,7 @@ REM *** Go
 SET GOROOT=C:\go
 SET GOPATH=%USERPROFILE%\go
 SET GOBIN=%GOPATH%\bin
-SET PATH=%GOROOT%\bin;%PATH%
+SET PATH=%GOROOT%\bin;%GOBIN%;%PATH%
 
 REM *** VC
 SET VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio 14.0
