@@ -4,6 +4,8 @@
 
 version: 1
 imports:
+  # ~/の下にprhをインストールしないとダメ
+  - path: ./node_modules/prh/prh-rules/media/WEB+DB_PRESS.yml
   - path: ./node_modules/prh/prh-rules/media/techbooster.yml
     disableImports: true
     ignoreRules:
