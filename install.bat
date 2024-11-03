@@ -23,6 +23,7 @@ mklink    %DIR_HOME%\.vimrc                  %DIR_DOTFILES%\.vimrc
 mklink    %DIR_HOME%\.gvimrc                 %DIR_DOTFILES%\.gvimrc
 mklink    %DIR_HOME%\.commit_template        %DIR_DOTFILES%\.commit_template
 mklink    %DIR_HOME%\init.cmd                %DIR_DOTFILES%\init.cmd
+mklink    %DIR_HOME%\init_local.cmd          %DIR_DOTFILES%\init_local.cmd
 mklink /D %DIR_HOME%\vimfiles                %DIR_DOTFILES%\vimfiles
 mklink /D %APPDATA%\efm-langserver           %DIR_DOTFILES%\efm-langserver
 mklink    %DIR_HOME%\.textlintrc             %DIR_DOTFILES%\.textlintrc
@@ -31,5 +32,7 @@ mklink    %DIR_HOME%\.prh_ignore_rule.yml    %DIR_DOTFILES%\.prh_ignore_rule.yml
 
 mkdir %DIR_HOME%\vimfiles\tmp
 mkdir %DIR_HOME%\vimfiles\undo
+mkdir %DIR_HOME%\vimfiles\colors
+mkdir %DIR_HOME%\vimfiles\plugin
 
 pause
