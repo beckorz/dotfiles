@@ -35,4 +35,6 @@ mkdir %DIR_HOME%\vimfiles\undo
 mkdir %DIR_HOME%\vimfiles\colors
 mkdir %DIR_HOME%\vimfiles\plugin
 
+powershell -NoProfile -ExecutionPolicy Unrestricted -Command "& { irm https://deno.land/install.ps1 | iex }"
+
 pause
