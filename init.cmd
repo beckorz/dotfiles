@@ -158,6 +158,10 @@ SET CMAKE_PATH=C:\dev\CMake
 SET CMAKE_BIN=%CMAKE_PATH%\bin
 SET PATH=%PATH%;%CMAKE_BIN%
 
+REM *** deno
+SET DENO_BIN=%userprofile%\.deno\bin\
+SET PATH=%PATH%;%DENO_BIN%
+
 SET LANG=ja_JP.UTF-8
 
 REM Load init_local.cmd

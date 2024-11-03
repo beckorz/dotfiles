@@ -172,3 +172,9 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 repo = 'mattn/vim-gemini'
 
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'yukimemi/futago.vim'
+
