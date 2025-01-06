@@ -27,7 +27,7 @@ mklink    %DIR_HOME%\init_local.cmd          %DIR_DOTFILES%\init_local.cmd
 mklink /D %DIR_HOME%\vimfiles                %DIR_DOTFILES%\vimfiles
 mklink /D %APPDATA%\efm-langserver           %DIR_DOTFILES%\efm-langserver
 mklink    %DIR_HOME%\.textlintrc             %DIR_DOTFILES%\.textlintrc
-mklink    %DIR_HOME%\.prh_ignore_rule.yml    %DIR_DOTFILES%\.prh_ignore_rule.yml
+mklink    %DIR_HOME%\.prh.yml                %DIR_DOTFILES%\.prh.yml
 
 
 mkdir %DIR_HOME%\vimfiles\tmp
