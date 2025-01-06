@@ -6,6 +6,7 @@
 - nodejs
 - Python
 - go
+- [Universal Ctags](https://ctags.io/)
 
 
 ## 方針
@@ -32,7 +33,7 @@ install.bat
 
 ```
 npm install textlint
-npm install textlint-rule-prh textlint-rule-preset-jtf-style textlint-rule-preset-ja-technical-writing
+npm install textlint-rule-prh textlint-rule-preset-jtf-style textlint-rule-preset-ja-technical-writing textlint-filter-rule-comments textlint-filter-rule-allowlist
 ```
 
 ```
@@ -44,3 +45,7 @@ go install github.com/mattn/efm-langserver@latest
 ```
 
 - [Vimで快適に記事を書くため環境](https://zenn.dev/skanehira/articles/2020-11-16-vim-writing-articles)
+
+## ToDo
+- Linux環境で動作確認
+
