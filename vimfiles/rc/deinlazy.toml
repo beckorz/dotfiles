@@ -14,3 +14,10 @@ depends = 'open-browser.vim'
 repo = 'andymass/vim-matchup'
 on_ft = ['python']
 
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'yukimemi/futago.vim'
+on_cmd = ['FutagoStartChat', 'FutagoHistory', 'FutagoGitCommit']
+depends = 'denops.vim'

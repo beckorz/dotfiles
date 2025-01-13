@@ -173,8 +173,7 @@ repo = 'ryanoasis/vim-devicons'
 repo = 'mattn/vim-gemini'
 
 [[plugins]]
-repo = 'vim-denops/denops.vim'
+repo = 'vim-test/vim-test'
 
 [[plugins]]
-repo = 'yukimemi/futago.vim'
-
+repo = 'github/copilot.vim'
